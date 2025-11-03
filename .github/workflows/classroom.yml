@@ -34,7 +34,7 @@ jobs:
         with:
           test-name: run unit tests
           setup-command: ''
-          command: mvn -f Towers/pom.xml -B -ntp -DfailIfNoTests=true test
+          command: mvn -f towers/pom.xml -B -ntp -DfailIfNoTests=true test
           timeout: 10
           max-score: 100
 
