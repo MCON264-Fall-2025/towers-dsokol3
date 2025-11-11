@@ -67,7 +67,6 @@ public class TowersVariations {
         //  c) Move n-1 disks from 'mid' to 'to' (using 'from' as helper)
 
         if (n == 0) {
-            //count*=2;
             return;
         }
         solveVariation(n - 1, from, mid, to);
