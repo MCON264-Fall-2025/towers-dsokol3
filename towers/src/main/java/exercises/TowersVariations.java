@@ -72,7 +72,6 @@ public class TowersVariations {
         }
         solveVariation(n - 1, from, mid, to);
         System.out.println(from + " -> " + mid);
-//        System.out.printf("Move disk %d: %d → %d → %d%n", n, from, mid, to);
         solveVariation(n - 1, to, mid, from);
         System.out.println(mid + " -> " + to);
         count += 2;
