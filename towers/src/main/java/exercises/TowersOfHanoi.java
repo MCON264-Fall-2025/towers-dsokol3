@@ -1,28 +1,28 @@
 package exercises;
 
-
 import java.util.List;
+
 
 /**
  * Towers of Hanoi (Recursive).
- *
+ * <p>
  * PROBLEM:
  * - Move a stack of n disks from peg 'from' to peg 'to' using peg 'aux',
- *   moving one disk at a time and never placing a larger disk on a smaller disk.
- *
+ * moving one disk at a time and never placing a larger disk on a smaller disk.
+ * <p>
  * RECURSION DESIGN:
  * - Base case:
- *     * n == 0 -> nothing to do (return).
+ * * n == 0 -> nothing to do (return).
  * - Recursive idea for n >= 1:
- *     1) Move n-1 disks from 'from' to 'aux' (using 'to' as auxiliary).
- *     2) Move the largest disk (disk n) from 'from' to 'to'.
- *     3) Move n-1 disks from 'aux' to 'to' (using 'from' as auxiliary).
- *
+ * 1) Move n-1 disks from 'from' to 'aux' (using 'to' as auxiliary).
+ * 2) Move the largest disk (disk n) from 'from' to 'to'.
+ * 3) Move n-1 disks from 'aux' to 'to' (using 'from' as auxiliary).
+ * <p>
  * COMPLEXITY:
  * - Moves: 2^n - 1
  * - Time: O(2^n)
  * - Space: O(n) recursion depth
- *
+ * <p>
  * SUGGESTION:
  * - Collect moves in a List<String> like "A -> C" so tests can assert the exact sequence.
  */
@@ -37,11 +37,13 @@ public class TowersOfHanoi {
      */
     public static void solve(int n, char from, char aux, char to, List<String> moves) {
         // TODO: implement recursively
-        // if (n == 0) return;
-        // 1) solve(n - 1, from, to, aux, moves);
-        // 2) moves.add(from + " -> " + to);
-        // 3) solve(n - 1, aux, from, to, moves);
+        if (n == 0) return;
+
+        solve(n - 1, from, to, aux, moves);
+        moves.add(from + " -> " + to);
+        solve(n - 1, aux, from, to, moves);
     }
+
 }
 
 
