@@ -55,10 +55,10 @@ public class TowersExercise21 {
             return;
         }
 
-            solve(n - 1, from, to, aux);
-            count++;
-            // increment count for moving disk n
-            solve(n - 1, aux, from, to);
+        solve(n - 1, from, to, aux);
+        count++;
+        // increment count for moving disk n
+        solve(n - 1, aux, from, to);
     }
 
     public static void main(String[] args) {
