@@ -66,6 +66,7 @@ public class TowersExercise21 {
         System.out.print("Enter number of rings (negative to quit): ");
         int n = in.nextInt();
         while (n > 0) {
+            count = 0; 
             solve(n, 'A', 'B', 'C'); // recursive call
             System.out.printf("Number of moves = %d%n", count);
             System.out.print("Enter number of rings (negative to quit): ");
