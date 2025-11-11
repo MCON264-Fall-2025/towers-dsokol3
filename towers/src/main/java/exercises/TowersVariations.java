@@ -67,15 +67,13 @@ public class TowersVariations {
         //  c) Move n-1 disks from 'mid' to 'to' (using 'from' as helper)
 
         if (n == 0) {
-            //count*=2;
             return;
         }
         solveVariation(n - 1, from, mid, to);
         System.out.println(from + " -> " + mid);
-//        System.out.printf("Move disk %d: %d → %d → %d%n", n, from, mid, to);
         solveVariation(n - 1, to, mid, from);
         System.out.println(mid + " -> " + to);
-        count+=2;
+        count += 2;
         solveVariation(n - 1, from, mid, to);
     }
 

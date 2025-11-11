@@ -1,6 +1,6 @@
 package exercises;
 
-import java.util.*;
+import java.util.List;
 
 
 /**
@@ -44,11 +44,6 @@ public class TowersOfHanoi {
         solve(n - 1, aux, from, to, moves);
     }
 
-//    public static void main(String[] args) {
-//        List<String> moves = new ArrayList<>();
-//        solve(3, 'A', 'B', 'C', moves);
-//        System.out.println(moves);
-//    }
 }
 
 
